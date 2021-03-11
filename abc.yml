@@ -1,0 +1,10 @@
+---
+- name: aa
+  hosts: appservers
+  become: true
+  tasks:
+  - name: Remove apache
+    apt:
+     pkg: apache
+     state: absent
+  
